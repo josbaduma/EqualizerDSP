@@ -40,7 +40,7 @@
 
 
 dspSystem::dspSystem()
-  :sampleRate_(0),bufferSize_(0),cv_(0){
+  :sampleRate_(0),bufferSize_(0),cv_(0),filters_(0){
 }
 
 dspSystem::~dspSystem() {
