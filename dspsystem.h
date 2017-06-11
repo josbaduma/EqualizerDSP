@@ -90,6 +90,9 @@ public:
   void update8kHzFilter(int value);
 
   void update16kHzFilter(int value);
+
+  void copyArray(int size, float* in, float* out);
+
 protected:
 
   /**

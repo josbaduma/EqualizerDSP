@@ -120,6 +120,78 @@ void MainWindow::on_filtro31HzSlider_valueChanged(int value){
     ;
 }
 
+void MainWindow::on_filtro63HzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update63HzFilter(value);
+    ;
+}
+
+void MainWindow::on_filtro125HzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update125HzFilter(value);
+    ;
+}
+
+void MainWindow::on_filtro250HzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update250HzFilter(value);
+    ;
+}
+
+void MainWindow::on_filtro500HzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update500HzFilter(value);
+    ;
+}
+
+void MainWindow::on_filtro1kHzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update1kHzFilter(value);
+    ;
+}
+
+void MainWindow::on_filtro2kHzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update2kHzFilter(value);
+    ;
+}
+
+void MainWindow::on_filtro4kHzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update4kHzFilter(value);
+    ;
+}
+
+void MainWindow::on_filtro8kHzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update8kHzFilter(value);
+    ;
+}
+
+void MainWindow::on_filtro16kHzSlider_valueChanged(int value){
+    if (!dspChanged_){
+        dspChanged_=true;
+    }
+    dsp_->update16kHzFilter(value);
+    ;
+}
+
 
 void MainWindow::on_fileButton_clicked() {
   selectedFiles_ =

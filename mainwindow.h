@@ -50,7 +50,6 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    int volumeGain;
     /**
       *Tolerance value
       */
@@ -88,7 +87,15 @@ private:
      void on_fileButton_clicked();
      void on_volumeSlider_valueChanged(int value);
      void on_filtro31HzSlider_valueChanged(int value);
-
+     void on_filtro63HzSlider_valueChanged(int value);
+     void on_filtro125HzSlider_valueChanged(int value);
+     void on_filtro250HzSlider_valueChanged(int value);
+     void on_filtro500HzSlider_valueChanged(int value);
+     void on_filtro1kHzSlider_valueChanged(int value);
+     void on_filtro2kHzSlider_valueChanged(int value);
+     void on_filtro4kHzSlider_valueChanged(int value);
+     void on_filtro8kHzSlider_valueChanged(int value);
+     void on_filtro16kHzSlider_valueChanged(int value);
 
      void update();
 
