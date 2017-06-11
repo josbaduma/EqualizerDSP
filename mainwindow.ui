@@ -209,16 +209,16 @@
       <item>
        <widget class="QSlider" name="filtro1kHzSlider">
         <property name="minimum">
-         <number>-25</number>
+         <number>1</number>
         </property>
         <property name="maximum">
-         <number>25</number>
+         <number>50</number>
         </property>
         <property name="value">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="sliderPosition">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -238,16 +238,16 @@
       <item>
        <widget class="QSlider" name="filtro2kHzSlider">
         <property name="minimum">
-         <number>-25</number>
+         <number>1</number>
         </property>
         <property name="maximum">
-         <number>25</number>
+         <number>50</number>
         </property>
         <property name="value">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="sliderPosition">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -267,16 +267,16 @@
       <item>
        <widget class="QSlider" name="filtro4kHzSlider">
         <property name="minimum">
-         <number>-25</number>
+         <number>1</number>
         </property>
         <property name="maximum">
-         <number>25</number>
+         <number>50</number>
         </property>
         <property name="value">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="sliderPosition">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -296,16 +296,16 @@
       <item>
        <widget class="QSlider" name="filtro8kHzSlider">
         <property name="minimum">
-         <number>-25</number>
+         <number>1</number>
         </property>
         <property name="maximum">
-         <number>25</number>
+         <number>50</number>
         </property>
         <property name="value">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="sliderPosition">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -325,16 +325,16 @@
       <item>
        <widget class="QSlider" name="filtro16kHzSlider">
         <property name="minimum">
-         <number>-25</number>
+         <number>1</number>
         </property>
         <property name="maximum">
-         <number>25</number>
+         <number>50</number>
         </property>
         <property name="value">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="sliderPosition">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>

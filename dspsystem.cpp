@@ -119,6 +119,7 @@ void dspSystem::update4kHzFilter(int value){
     /*
     * Updating filter gain value
     */
+    std::cout << "4 kHz -> " << filter4kHzGain_ << std::endl;
     filter4kHzGain_=value;
 
 }
@@ -154,10 +155,10 @@ bool dspSystem::init(const int sampleRate,const int bufferSize) {
     filter250HzGain_ = 0;
     filter500HzGain_ = 0;
     filter1kHzGain_ = 0;
-    filter2kHzGain_ = 0;
-    filter4kHzGain_ = 0;
-    filter8kHzGain_ = 0;
-    filter16kHzGain_ = 0;
+    filter2kHzGain_ = 10;
+    filter4kHzGain_ = 10;
+    filter8kHzGain_ = 10;
+    filter16kHzGain_ = 10;
 
 
     delete cv_;
@@ -201,15 +202,15 @@ bool dspSystem::process(float* in,float* out) {
     cv_->filter(bufferSize_, volumeGain_, tmpIn, tmpOut);
 
     filters_->filter31Hz(bufferSize_, filter31HzGain_, tmpOut, tmpOut31Hz);
-    //filters_->filter63Hz(bufferSize_, filter63HzGain_, tmpOut, tmpOut63Hz);
-    //filters_->filter125Hz(bufferSize_, filter125HzGain_, tmpOut, tmpOut125Hz);
-    //filters_->filter250Hz(bufferSize_, filter250HzGain_, tmpOut, tmpOut250Hz);
-    //filters_->filter500Hz(bufferSize_, filter500HzGain_, tmpOut, tmpOut500Hz);
-    //filters_->filter1kHz(bufferSize_, filter1kHzGain_, tmpOut, tmpOut1kHz);
-    //filters_->filter2kHz(bufferSize_, filter2kHzGain_, tmpOut, tmpOut2kHz);
-    //filters_->filter4kHz(bufferSize_, filter4kHzGain_, tmpOut, tmpOut4kHz);
-    //filters_->filter8kHz(bufferSize_, filter8kHzGain_, tmpOut, tmpOut8kHz);
-    //filters_->filter16kHz(bufferSize_, filter16kHzGain_, tmpOut, tmpOut16kHz);
+    filters_->filter63Hz(bufferSize_, filter63HzGain_, tmpOut, tmpOut63Hz);
+    filters_->filter125Hz(bufferSize_, filter125HzGain_, tmpOut, tmpOut125Hz);
+    filters_->filter250Hz(bufferSize_, filter250HzGain_, tmpOut, tmpOut250Hz);
+    filters_->filter500Hz(bufferSize_, filter500HzGain_, tmpOut, tmpOut500Hz);
+    filters_->filter1kHz(bufferSize_, filter1kHzGain_, tmpOut, tmpOut1kHz);
+    filters_->filter2kHz(bufferSize_, filter2kHzGain_, tmpOut, tmpOut2kHz);
+    filters_->filter4kHz(bufferSize_, filter4kHzGain_, tmpOut, tmpOut4kHz);
+    filters_->filter8kHz(bufferSize_, filter8kHzGain_, tmpOut, tmpOut8kHz);
+    filters_->filter16kHz(bufferSize_, filter16kHzGain_, tmpOut, tmpOut16kHz);
 
     for(int n=0; n<bufferSize_; n++) {
         out[n] = tmpOut31Hz[n] + tmpOut63Hz[n] + tmpOut125Hz[n] + tmpOut250Hz[n] + tmpOut500Hz[n]
