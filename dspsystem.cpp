@@ -46,8 +46,6 @@ dspSystem::dspSystem()
 dspSystem::~dspSystem() {
     delete cv_;
     delete filters_;
-    cv_;
-    filters_;
 }
 
 
@@ -64,6 +62,7 @@ void dspSystem::update31HzFilter(int value){
     * Updating filter gain value
     */
     filter31HzGain_=value;
+    std::cout << "31 Hz -> " << filter31HzGain_ << std::endl;
 
 }
 
@@ -72,6 +71,7 @@ void dspSystem::update63HzFilter(int value){
     * Updating filter gain value
     */
     filter63HzGain_=value;
+    std::cout << "63 Hz -> " << filter63HzGain_ << std::endl;
 
 }
 
@@ -80,6 +80,7 @@ void dspSystem::update125HzFilter(int value){
     * Updating filter gain value
     */
     filter125HzGain_=value;
+    std::cout << "125 Hz -> " << filter125HzGain_ << std::endl;
 
 }
 
@@ -88,6 +89,7 @@ void dspSystem::update250HzFilter(int value){
     * Updating filter gain value
     */
     filter250HzGain_=value;
+    std::cout << "250 Hz -> " << filter250HzGain_ << std::endl;
 
 }
 
@@ -96,6 +98,7 @@ void dspSystem::update500HzFilter(int value){
     * Updating filter gain value
     */
     filter500HzGain_=value;
+    std::cout << "500 Hz -> " << filter500HzGain_ << std::endl;
 
 }
 
@@ -104,6 +107,7 @@ void dspSystem::update1kHzFilter(int value){
     * Updating filter gain value
     */
     filter1kHzGain_=value;
+    std::cout << "1 kHz -> " << filter1kHzGain_ << std::endl;
 
 }
 
@@ -112,6 +116,7 @@ void dspSystem::update2kHzFilter(int value){
     * Updating filter gain value
     */
     filter2kHzGain_=value;
+    std::cout << "2 kHz -> " << filter2kHzGain_ << std::endl;
 
 }
 
@@ -119,8 +124,8 @@ void dspSystem::update4kHzFilter(int value){
     /*
     * Updating filter gain value
     */
-    std::cout << "4 kHz -> " << filter4kHzGain_ << std::endl;
     filter4kHzGain_=value;
+    std::cout << "4 kHz -> " << filter4kHzGain_ << std::endl;
 
 }
 
@@ -129,6 +134,7 @@ void dspSystem::update8kHzFilter(int value){
     * Updating filter gain value
     */
     filter8kHzGain_=value;
+    std::cout << "8 kHz -> " << filter8kHzGain_ << std::endl;
 
 }
 
@@ -137,6 +143,7 @@ void dspSystem::update16kHzFilter(int value){
     * Updating filter gain value
     */
     filter16kHzGain_=value;
+    std::cout << "16 kHz -> " << filter16kHzGain_ << std::endl;
 
 }
 
@@ -149,16 +156,16 @@ bool dspSystem::init(const int sampleRate,const int bufferSize) {
     sampleRate_ = sampleRate;
     bufferSize_ = bufferSize;
     volumeGain_ = 10;
-    filter31HzGain_ = 0;
-    filter63HzGain_ = 0;
-    filter125HzGain_ =0;
-    filter250HzGain_ = 0;
-    filter500HzGain_ = 0;
-    filter1kHzGain_ = 0;
-    filter2kHzGain_ = 10;
-    filter4kHzGain_ = 10;
-    filter8kHzGain_ = 10;
-    filter16kHzGain_ = 10;
+    filter31HzGain_ = 25;
+    filter63HzGain_ = 25;
+    filter125HzGain_ = 25;
+    filter250HzGain_ = 25;
+    filter500HzGain_ = 25;
+    filter1kHzGain_ = 25;
+    filter2kHzGain_ = 25;
+    filter4kHzGain_ = 25;
+    filter8kHzGain_ = 25;
+    filter16kHzGain_ = 25;
 
 
     delete cv_;
