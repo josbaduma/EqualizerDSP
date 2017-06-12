@@ -156,16 +156,16 @@ bool dspSystem::init(const int sampleRate,const int bufferSize) {
     sampleRate_ = sampleRate;
     bufferSize_ = bufferSize;
     volumeGain_ = 10;
-    filter31HzGain_ = 25;
-    filter63HzGain_ = 25;
-    filter125HzGain_ = 25;
-    filter250HzGain_ = 25;
-    filter500HzGain_ = 25;
-    filter1kHzGain_ = 25;
-    filter2kHzGain_ = 25;
-    filter4kHzGain_ = 25;
-    filter8kHzGain_ = 25;
-    filter16kHzGain_ = 25;
+    filter31HzGain_ = 0;
+    filter63HzGain_ = 0;
+    filter125HzGain_ = 0;
+    filter250HzGain_ = 0;
+    filter500HzGain_ = 0;
+    filter1kHzGain_ = 0;
+    filter2kHzGain_ = 0;
+    filter4kHzGain_ = 0;
+    filter8kHzGain_ = 0;
+    filter16kHzGain_ = 0;
 
 
     delete cv_;

@@ -41,10 +41,10 @@
       <item>
        <widget class="QSlider" name="volumeSlider">
         <property name="maximum">
-         <number>50</number>
+         <number>100</number>
         </property>
         <property name="value">
-         <number>10</number>
+         <number>20</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -53,7 +53,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>2</number>
         </property>
        </widget>
       </item>
@@ -64,16 +64,16 @@
       <item>
        <widget class="QSlider" name="filtro31HzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -82,7 +82,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -93,16 +93,16 @@
       <item>
        <widget class="QSlider" name="filtro63HzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -111,7 +111,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -122,16 +122,16 @@
       <item>
        <widget class="QSlider" name="filtro125HzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -140,7 +140,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -151,16 +151,16 @@
       <item>
        <widget class="QSlider" name="filtro250HzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -169,7 +169,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -180,16 +180,16 @@
       <item>
        <widget class="QSlider" name="filtro500HzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -198,7 +198,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -209,16 +209,16 @@
       <item>
        <widget class="QSlider" name="filtro1kHzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -227,7 +227,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -238,16 +238,22 @@
       <item>
        <widget class="QSlider" name="filtro2kHzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="pageStep">
+         <number>10</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -256,7 +262,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -267,16 +273,16 @@
       <item>
        <widget class="QSlider" name="filtro4kHzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -285,7 +291,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -296,16 +302,16 @@
       <item>
        <widget class="QSlider" name="filtro8kHzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>1</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>1</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -314,7 +320,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
@@ -325,16 +331,16 @@
       <item>
        <widget class="QSlider" name="filtro16kHzSlider">
         <property name="minimum">
-         <number>1</number>
+         <number>-12</number>
         </property>
         <property name="maximum">
-         <number>50</number>
+         <number>12</number>
         </property>
         <property name="value">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="sliderPosition">
-         <number>25</number>
+         <number>0</number>
         </property>
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -343,7 +349,7 @@
          <enum>QSlider::TicksBothSides</enum>
         </property>
         <property name="tickInterval">
-         <number>5</number>
+         <number>1</number>
         </property>
        </widget>
       </item>
