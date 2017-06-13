@@ -222,7 +222,6 @@ bool dspSystem::process(float* in,float* out) {
     for(int n=0; n<bufferSize_; n++) {
         out[n] = tmpOut31Hz[n] + tmpOut63Hz[n] + tmpOut125Hz[n] + tmpOut250Hz[n] + tmpOut500Hz[n]
                 +tmpOut1kHz[n] + tmpOut2kHz[n] + tmpOut4kHz[n] + tmpOut8kHz[n] + tmpOut16kHz[n];
-        std::cout << out[n] << ", ";
     }
 
     return true;
