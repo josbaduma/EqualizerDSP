@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>925</width>
-    <height>398</height>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,149 +15,6 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" colspan="11">
-     <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <property name="spacing">
-         <number>3</number>
-        </property>
-        <item>
-         <widget class="QLineEdit" name="fileEdit"/>
-        </item>
-        <item>
-         <widget class="QToolButton" name="fileButton">
-          <property name="text">
-           <string>...</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="0">
-     <layout class="QHBoxLayout" name="VolumeLayout">
-      <item>
-       <widget class="QSlider" name="volumeSlider">
-        <property name="maximum">
-         <number>50</number>
-        </property>
-        <property name="pageStep">
-         <number>5</number>
-        </property>
-        <property name="value">
-         <number>25</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksBothSides</enum>
-        </property>
-        <property name="tickInterval">
-         <number>1</number>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="1">
-     <layout class="QHBoxLayout" name="Filtro31Hz">
-      <item>
-       <widget class="QSlider" name="filtro31HzSlider">
-        <property name="minimum">
-         <number>-12</number>
-        </property>
-        <property name="maximum">
-         <number>12</number>
-        </property>
-        <property name="pageStep">
-         <number>1</number>
-        </property>
-        <property name="value">
-         <number>0</number>
-        </property>
-        <property name="sliderPosition">
-         <number>0</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksBothSides</enum>
-        </property>
-        <property name="tickInterval">
-         <number>1</number>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="2">
-     <layout class="QHBoxLayout" name="Filtro63Hz">
-      <item>
-       <widget class="QSlider" name="filtro63HzSlider">
-        <property name="minimum">
-         <number>-12</number>
-        </property>
-        <property name="maximum">
-         <number>12</number>
-        </property>
-        <property name="pageStep">
-         <number>1</number>
-        </property>
-        <property name="value">
-         <number>0</number>
-        </property>
-        <property name="sliderPosition">
-         <number>0</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksBothSides</enum>
-        </property>
-        <property name="tickInterval">
-         <number>1</number>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="3">
-     <layout class="QHBoxLayout" name="Filtro125Hz">
-      <item>
-       <widget class="QSlider" name="filtro125HzSlider">
-        <property name="minimum">
-         <number>-12</number>
-        </property>
-        <property name="maximum">
-         <number>12</number>
-        </property>
-        <property name="pageStep">
-         <number>1</number>
-        </property>
-        <property name="value">
-         <number>0</number>
-        </property>
-        <property name="sliderPosition">
-         <number>0</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksBothSides</enum>
-        </property>
-        <property name="tickInterval">
-         <number>1</number>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
     <item row="1" column="4">
      <layout class="QHBoxLayout" name="Filtro250Hz">
       <item>
@@ -190,10 +47,10 @@
       </item>
      </layout>
     </item>
-    <item row="1" column="5">
-     <layout class="QHBoxLayout" name="Filtro500Hz">
+    <item row="1" column="8">
+     <layout class="QHBoxLayout" name="Filtro4kHz">
       <item>
-       <widget class="QSlider" name="filtro500HzSlider">
+       <widget class="QSlider" name="filtro4kHzSlider">
         <property name="minimum">
          <number>-12</number>
         </property>
@@ -222,10 +79,75 @@
       </item>
      </layout>
     </item>
+    <item row="2" column="8">
+     <widget class="QLabel" name="filtro4kHzLabel">
+      <property name="text">
+       <string>4 kHz</string>
+      </property>
+     </widget>
+    </item>
     <item row="1" column="6">
      <layout class="QHBoxLayout" name="Filtro1kHz">
       <item>
        <widget class="QSlider" name="filtro1kHzSlider">
+        <property name="minimum">
+         <number>-12</number>
+        </property>
+        <property name="maximum">
+         <number>12</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="sliderPosition">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QSlider" name="volumeSlider">
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="pageStep">
+         <number>5</number>
+        </property>
+        <property name="value">
+         <number>25</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="9">
+     <layout class="QHBoxLayout" name="Filtro8kHz">
+      <item>
+       <widget class="QSlider" name="filtro8kHzSlider">
         <property name="minimum">
          <number>-12</number>
         </property>
@@ -289,42 +211,52 @@
       </item>
      </layout>
     </item>
-    <item row="1" column="8">
-     <layout class="QHBoxLayout" name="Filtro4kHz">
+    <item row="2" column="2">
+     <widget class="QLabel" name="filtro63HzLabel">
+      <property name="text">
+       <string>63 Hz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="6">
+     <widget class="QLabel" name="filtro1kHzLabel">
+      <property name="text">
+       <string>1 kHz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="10">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QSlider" name="filtro4kHzSlider">
-        <property name="minimum">
-         <number>-12</number>
-        </property>
-        <property name="maximum">
-         <number>12</number>
-        </property>
-        <property name="pageStep">
-         <number>1</number>
-        </property>
-        <property name="value">
-         <number>0</number>
-        </property>
-        <property name="sliderPosition">
-         <number>0</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksBothSides</enum>
-        </property>
-        <property name="tickInterval">
-         <number>1</number>
-        </property>
-       </widget>
+       <widget class="QComboBox" name="comboBox_2"/>
       </item>
      </layout>
     </item>
-    <item row="1" column="9">
-     <layout class="QHBoxLayout" name="Filtro8kHz">
+    <item row="2" column="1">
+     <widget class="QLabel" name="filtro31HzLabel">
+      <property name="text">
+       <string>31 Hz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QLabel" name="filtro500HzLabel">
+      <property name="text">
+       <string>500 Hz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QLabel" name="filtro250HzLabel">
+      <property name="text">
+       <string>250 Hz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <layout class="QHBoxLayout" name="Filtro31Hz">
       <item>
-       <widget class="QSlider" name="filtro8kHzSlider">
+       <widget class="QSlider" name="filtro31HzSlider">
         <property name="minimum">
          <number>-12</number>
         </property>
@@ -385,26 +317,72 @@
       </item>
      </layout>
     </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="volume">
+    <item row="2" column="7">
+     <widget class="QLabel" name="filtro2kHzLabel">
       <property name="text">
-       <string>Volumen</string>
+       <string>2 kHz</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QLabel" name="filtro31HzLabel">
+    <item row="0" column="0" colspan="11">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="fileEdit"/>
+        </item>
+        <item>
+         <widget class="QToolButton" name="fileButton">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="10">
+     <widget class="QLabel" name="filtro16kHzLabel">
       <property name="text">
-       <string>31 Hz</string>
+       <string>16 kHz</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="2">
-     <widget class="QLabel" name="filtro63HzLabel">
-      <property name="text">
-       <string>63 Hz</string>
-      </property>
-     </widget>
+    <item row="1" column="5">
+     <layout class="QHBoxLayout" name="Filtro500Hz">
+      <item>
+       <widget class="QSlider" name="filtro500HzSlider">
+        <property name="minimum">
+         <number>-12</number>
+        </property>
+        <property name="maximum">
+         <number>12</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="sliderPosition">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item row="2" column="3">
      <widget class="QLabel" name="filtro125HzLabel">
@@ -413,40 +391,37 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="4">
-     <widget class="QLabel" name="filtro250HzLabel">
-      <property name="text">
-       <string>250 Hz</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="5">
-     <widget class="QLabel" name="filtro500HzLabel">
-      <property name="text">
-       <string>500 Hz</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="6">
-     <widget class="QLabel" name="filtro1kHzLabel">
-      <property name="text">
-       <string>1 kHz</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="7">
-     <widget class="QLabel" name="filtro2kHzLabel">
-      <property name="text">
-       <string>2 kHz</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="8">
-     <widget class="QLabel" name="filtro4kHzLabel">
-      <property name="text">
-       <string>4 kHz</string>
-      </property>
-     </widget>
+    <item row="1" column="3">
+     <layout class="QHBoxLayout" name="Filtro125Hz">
+      <item>
+       <widget class="QSlider" name="filtro125HzSlider">
+        <property name="minimum">
+         <number>-12</number>
+        </property>
+        <property name="maximum">
+         <number>12</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="sliderPosition">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item row="2" column="9">
      <widget class="QLabel" name="filtro8kHzLabel">
@@ -455,12 +430,47 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="10">
-     <widget class="QLabel" name="filtro16kHzLabel">
+    <item row="1" column="2">
+     <layout class="QHBoxLayout" name="Filtro63Hz">
+      <item>
+       <widget class="QSlider" name="filtro63HzSlider">
+        <property name="minimum">
+         <number>-12</number>
+        </property>
+        <property name="maximum">
+         <number>12</number>
+        </property>
+        <property name="pageStep">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>0</number>
+        </property>
+        <property name="sliderPosition">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+        <property name="tickInterval">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="volume">
       <property name="text">
-       <string>16 kHz</string>
+       <string>Volumen</string>
       </property>
      </widget>
+    </item>
+    <item row="3" column="0" colspan="7">
+     <layout class="QHBoxLayout" name="horizontalLayout_4"/>
     </item>
    </layout>
   </widget>
