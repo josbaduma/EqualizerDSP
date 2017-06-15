@@ -195,9 +195,9 @@ bool dspSystem::process(float* in,float* out) {
     float tmpOut8kHz[bufferSize_];
     float tmpOut16kHz[bufferSize_];
 
-    for(int i=0; i<bufferSize_; i++){
-        std::cout << tmpOut[i] << ", ";
-    }std::cout << std::endl;
+    //    for(int i=0; i<bufferSize_; i++){
+    //        std::cout << tmpOut[i] << ", ";
+    //    }std::cout << std::endl;
 
     copyArray(bufferSize_, tmpOut, tmpOut31Hz);
     copyArray(bufferSize_, tmpOut, tmpOut63Hz);
@@ -212,7 +212,7 @@ bool dspSystem::process(float* in,float* out) {
 
     cv_->filter(bufferSize_, volumeGain_, tmpIn, tmpOut);
 
-    /*filters_->filter31Hz(bufferSize_, filter31HzGain_, tmpOut, tmpOut31Hz);
+    filters_->filter31Hz(bufferSize_, filter31HzGain_, tmpOut, tmpOut31Hz);
     filters_->filter63Hz(bufferSize_, filter63HzGain_, tmpOut, tmpOut63Hz);
     filters_->filter125Hz(bufferSize_, filter125HzGain_, tmpOut, tmpOut125Hz);
     filters_->filter250Hz(bufferSize_, filter250HzGain_, tmpOut, tmpOut250Hz);
@@ -220,12 +220,12 @@ bool dspSystem::process(float* in,float* out) {
     filters_->filter1kHz(bufferSize_, filter1kHzGain_, tmpOut, tmpOut1kHz);
     filters_->filter2kHz(bufferSize_, filter2kHzGain_, tmpOut, tmpOut2kHz);
     filters_->filter4kHz(bufferSize_, filter4kHzGain_, tmpOut, tmpOut4kHz);
-    filters_->filter8kHz(bufferSize_, filter8kHzGain_, tmpOut, tmpOut8kHz);*/
+    filters_->filter8kHz(bufferSize_, filter8kHzGain_, tmpOut, tmpOut8kHz);
     filters_->filter16kHz(bufferSize_, filter16kHzGain_, tmpOut, tmpOut16kHz);
 
     for(int n=0; n<bufferSize_; n++) {
-        out[n] = /*tmpOut31Hz[n] + tmpOut63Hz[n] + tmpOut125Hz[n] + tmpOut250Hz[n] + tmpOut500Hz[n]
-                +tmpOut1kHz[n] + tmpOut2kHz[n] + tmpOut4kHz[n] + tmpOut8kHz[n] +*/ tmpOut16kHz[n];
+        out[n] = tmpOut31Hz[n] + tmpOut63Hz[n] + tmpOut125Hz[n] + tmpOut250Hz[n] + tmpOut500Hz[n]
+                        +tmpOut1kHz[n] + tmpOut2kHz[n] + tmpOut4kHz[n] + tmpOut8kHz[n] + tmpOut16kHz[n];
     }
 
     return true;

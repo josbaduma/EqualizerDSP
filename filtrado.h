@@ -10,6 +10,9 @@
 #ifndef FILTRADO_H
 #define FILTRADO_H
 #include <math.h>
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
 
 
 class Filtrado

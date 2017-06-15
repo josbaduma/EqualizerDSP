@@ -36,7 +36,7 @@ void Filtrado::filter31Hz(int blockSize, int filterGain, float * in, float * out
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*31.5/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -45,10 +45,10 @@ void Filtrado::filter31Hz(int blockSize, int filterGain, float * in, float * out
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -73,7 +73,7 @@ void Filtrado::filter63Hz(int blockSize, int filterGain, float * in, float * out
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*63.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -82,10 +82,10 @@ void Filtrado::filter63Hz(int blockSize, int filterGain, float * in, float * out
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -110,7 +110,7 @@ void Filtrado::filter125Hz(int blockSize, int filterGain, float * in, float * ou
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*125.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -119,10 +119,10 @@ void Filtrado::filter125Hz(int blockSize, int filterGain, float * in, float * ou
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -147,7 +147,7 @@ void Filtrado::filter250Hz(int blockSize, int filterGain, float * in, float * ou
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*250.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -156,10 +156,10 @@ void Filtrado::filter250Hz(int blockSize, int filterGain, float * in, float * ou
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -184,7 +184,7 @@ void Filtrado::filter500Hz(int blockSize, int filterGain, float * in, float * ou
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*500.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -193,10 +193,10 @@ void Filtrado::filter500Hz(int blockSize, int filterGain, float * in, float * ou
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -221,7 +221,7 @@ void Filtrado::filter1kHz(int blockSize, int filterGain, float * in, float * out
 
     float K = 1 - ((2*Pi*1000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*16000.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -230,10 +230,10 @@ void Filtrado::filter1kHz(int blockSize, int filterGain, float * in, float * out
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -258,7 +258,7 @@ void Filtrado::filter2kHz(int blockSize, int filterGain, float * in, float * out
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*2000.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -267,10 +267,10 @@ void Filtrado::filter2kHz(int blockSize, int filterGain, float * in, float * out
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -295,7 +295,7 @@ void Filtrado::filter4kHz(int blockSize, int filterGain, float * in, float * out
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*4000.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -304,10 +304,10 @@ void Filtrado::filter4kHz(int blockSize, int filterGain, float * in, float * out
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -332,7 +332,7 @@ void Filtrado::filter8kHz(int blockSize, int filterGain, float * in, float * out
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*8000.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -341,10 +341,10 @@ void Filtrado::filter8kHz(int blockSize, int filterGain, float * in, float * out
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
 
@@ -369,7 +369,8 @@ void Filtrado::filter16kHz(int blockSize, int filterGain, float * in, float * ou
 
     float K = 1 - ((2*Pi*16000.0)/(2*Q*44100.0));
     float w0 = 2*Pi*16000.0/44100.0;
-    G = pow(10,(filterGain/20));
+    G = pow(10,(filterGain/20.0));
+    std::cout << "Ganancia 16kHz: " << G << std::endl;
 
     a1 = -2*K*cos(w0);
     a2 = pow(K,2);
@@ -378,9 +379,9 @@ void Filtrado::filter16kHz(int blockSize, int filterGain, float * in, float * ou
     // Aplica a las entradas
 
     out[0] = G*in[0];
-    out[1] = G*(in[1] - a1*out[0]);
+    out[1] = G*(in[1]) - a1*out[0];
 
     for (long n = 2; n < blockSize; n++){
-        out[n] = G*(in[n] - in[n-2] - a1*out[n-1] - a2*out[n-2]);
+        out[n] = G*(in[n] - in[n-2]) - a1*out[n-1] - a2*out[n-2];
     }
 }
