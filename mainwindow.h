@@ -31,8 +31,14 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QFileDialog>
+#include <QtCharts/QChartView>
+#include <QtCharts/QLineSeries>
+#include <QtCharts/QChart>
+#include <QtCharts/QCategoryAxis>
 
 #include "dspsystem.h"
+
+QT_CHARTS_USE_NAMESPACE
 
 namespace Ui {
 class MainWindow;
@@ -81,6 +87,11 @@ private:
       *DSP change
       */
      bool dspChanged_;
+
+     QLineSeries* series;
+     QChart* chart;
+     QCategoryAxis* axisX;
+     QCategoryAxis* axisY;
      
    private slots:
      void on_fileEdit_returnPressed();
@@ -98,7 +109,8 @@ private:
      void on_filtro16kHzSlider_valueChanged(int value);
 
      void update();
-
+     void on_presetsComboBox_currentIndexChanged(const QString &arg1);
+     void updateFTChart();
 };
 
 
